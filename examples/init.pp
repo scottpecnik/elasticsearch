@@ -16,5 +16,6 @@ elasticsearch_template { 'analytic_template':
   servername => 'localhost',
   port       => '9201',
   ssl        => false,
-  content    => 'puppet:///modules/elasticsearch/template_1.json',
+  content    => 'C:\Users\specnik\repos\elasticsearch\files\template_1.json'
+  # content    => 'puppet:///modules/elasticsearch/template_1.json',
 }

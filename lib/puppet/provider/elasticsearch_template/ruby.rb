@@ -10,7 +10,7 @@ Puppet::Type.type(:elasticsearch_template).provide(
   end
 
   def create
-    # createTemplate()
+    createTemplate()
   end
 
   def destroy
@@ -28,17 +28,11 @@ Puppet::Type.type(:elasticsearch_template).provide(
   end
 
   def createTemplate
-    puts "create"
-    puts File.file? resource[:content]
-    # puts Puppet::FileSystem.read(resource[:content])
     response = rest(resource[:servername], resource[:port],
                 "_template/#{resource[:name]}",
                 'PUT',
                 resource[:ssl],
-                resource[:content])
-    puts "create: #{response.code.to_i}"
-    return true if resposne.code.to_i == 200
-    response.code.to_i
+                Puppet::FileSystem.read(resource[:content]))
   end
 
   def deleteTemplate

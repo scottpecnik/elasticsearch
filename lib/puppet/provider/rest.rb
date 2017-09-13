@@ -34,13 +34,16 @@ class Puppet::Provider::REST < Puppet::Provider
       req = Net::HTTP::Get.new uri.request_uri
     when 'PUT'
       req = Net::HTTP::Put.new uri.request_uri
-      req.set_form_data(body)
+      req.body = body
     when 'POST'
       req = Net::HTTP::Post.new uri.request_uri
+      req.body = body
     when 'DELETE'
       req = Net::HTTP::Delete.new uri.request_uri
     when 'HEAD'
       req = Net::HTTP::Head.new uri.request_uri
+    when 'OPTIONS'
+      req = Net::HTTP::Options.new uri.request_uri
     end
 
     if username and password
