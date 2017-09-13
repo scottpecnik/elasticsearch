@@ -27,13 +27,11 @@ Puppet::Type.type(:elasticsearch_template).provide(
   end
 
   def createTemplate
-    puts Puppet::FileSystem.read(resource[:content])
     response = rest(resource[:servername], resource[:port],
                 "_template/#{resource[:name]}",
                 'PUT',
                 resource[:ssl],
                 Puppet::FileSystem.read(resource[:content]))
-    puts "Put: #{response.code.to_i}"
   end
 
   def deleteTemplate
