@@ -1,0 +1,15 @@
+{
+  "name": "scottpecnik-elasticsearch",
+  "version": "0.1.0",
+  "author": "scottpecnik",
+  "summary": "Module to manage the configuration of ElasticSearch",
+  "license": "Apache-2.0",
+  "source": "https://github.com/scottpecnik/elasticsearch.git",
+  "project_page": "https://github.com/scottpecnik/elasticsearch",
+  "issues_url": "https://github.com/scottpecnik/elasticsearch/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
