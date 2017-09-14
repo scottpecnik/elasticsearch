@@ -11,11 +11,16 @@
 #
 # include ::elasticsearch
 
-elasticsearch_template { 'analytic_template':
+file { 'C:/temp/template_1.json':
+  ensure  => present,
+  content => 'puppet:///modules/elasticsearch/template_1.json',
+}
+
+elasticsearch_template { 'template_1':
   ensure     => present,
   servername => 'localhost',
   port       => '9201',
   ssl        => false,
-  content    => 'C:\Users\specnik\repos\elasticsearch\files\template_1.json'
-  # content    => 'puppet:///modules/elasticsearch/template_1.json',
+  content    => 'C:/temp/template_1.json',
+  require    => File['C:/temp/template_1.json']
 }
