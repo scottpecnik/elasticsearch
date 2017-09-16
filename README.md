@@ -29,9 +29,9 @@ where it is idempotent.
 
 ## Setup
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements
 
-There is not setup required to use this module, simply add the following to your Puppetfile
+There is no setup required to use this module, simply add the following to your Puppetfile
 
 ```
 mod 'scottpecnik/elasticsearch',
