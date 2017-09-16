@@ -15,11 +15,11 @@
 
 This is a very simple module that was built to solve a specific customer problem!
 A good percentage of the code was adapted from the approved puppet [elasticsearch
-module.] (https://github.com/elastic/puppet-elasticsearch/)  As requirements
+module.](https://github.com/elastic/puppet-elasticsearch/)  As requirements
 change I will add to the functionality.
 
 The reason this module was created is because the approved [elasticsearch
-module] (https://github.com/elastic/puppet-elasticsearch/) installed elasticsearch
+module](https://github.com/elastic/puppet-elasticsearch/) installed elasticsearch
 on the machine directly.  I needed some of the functionality, but not all.
 My understanding of the approved elasticsearch module is that when you use it,
 it installs elasticsearch.
