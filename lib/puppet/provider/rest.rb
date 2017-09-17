@@ -25,9 +25,9 @@ class Puppet::Provider::REST < Puppet::Provider
                 proxy_username = nil, \
                 proxy_password = nil
 
-    protocol = 'https'
+    protocol = 'http'
     if ssl
-      protocol = 'http'
+      protocol = 'https'
     end
     uri = URI("#{protocol}://#{host}:#{port}/#{resource}")
     http = Net::HTTP.new uri.host, uri.port, proxy_host, proxy_port, proxy_username, proxy_password
