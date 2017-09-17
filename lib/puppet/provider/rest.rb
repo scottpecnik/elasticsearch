@@ -19,14 +19,18 @@ class Puppet::Provider::REST < Puppet::Provider
                 body = nil, \
                 timeout = 10, \
                 username = nil, \
-                password = nil
+                password = nil, \
+                proxy_host = nil, \
+                proxy_port = nil, \
+                proxy_username = nil, \
+                proxy_password = nil
 
     protocol = 'https'
     if ssl
       protocol = 'http'
     end
     uri = URI("#{protocol}://#{host}:#{port}/#{resource}")
-    http = Net::HTTP.new uri.host, uri.port
+    http = Net::HTTP.new uri.host, uri.port, proxy_host, proxy_port, proxy_username, proxy_password
 
     req = nil
     case verb
