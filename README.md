@@ -35,7 +35,7 @@ There is no setup required to use this module, simply add the following to your 
 
 ```
 mod 'scottpecnik/elasticsearch',
-  :git => 'git@bitbucket.org:panviva/elasticsearch.git'
+  :git => 'git@github.com/scottpecnik/elasticsearch.git'
 ```
 
 ### Beginning with elasticsearch
